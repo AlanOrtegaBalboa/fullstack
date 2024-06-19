@@ -7,6 +7,7 @@ use Illuminate\Auth\Middleware\RedirectIfAuthenticated;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
+
 class BackofficeServiceProvider extends ServiceProvider
 {
     public function register(): void
@@ -31,7 +32,7 @@ class BackofficeServiceProvider extends ServiceProvider
 
 
     }
-    private function registerJsonGroup(): void{
+    public function registerJsonGroup(): void{
         Route::macro('jsonGroup', function (string $prefix, string $controller, array $methods = []){
             Route::prefix($prefix)->name($prefix .'.')->group(function () use ($controller, $methods) {
                 if (in_array('index', $methods)){
