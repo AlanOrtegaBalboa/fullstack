@@ -16,27 +16,7 @@ Route::get('/', function () {
 
 
 Route::get('/dashboard', function () {
-    dd(
-        app(SidebarGenerator::class)
-            ->addSidebarItem(new SidebarHelloUser())
-            ->addSidebarItem(
-                new SidebarLink(
-                    text: 'Dashboard',
-                    href: '#',
-                    iconComponent: Heroicons::HOME,
-                    current: false,
-                )
-            )
-            ->addSidebarItem(new SidebarSeparator())
-            ->addSidebarItem(
-                new SidebarLink(
-                    text: 'Cerrar sesión',
-                    href: route('logout'),
-                    iconComponent: Heroicons::LOGOUT,
-                    current: false,
-                )
-            )
-    );
+
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
