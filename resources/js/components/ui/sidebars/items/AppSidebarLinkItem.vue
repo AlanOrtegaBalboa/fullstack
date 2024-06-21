@@ -22,7 +22,7 @@ defineProps({
         required: true,
     },
     current:{
-        type: String,
+        type: Boolean,
         required: true,
     },
 })
@@ -34,7 +34,7 @@ const { loadIcon } = useIconLoader();
     <li class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
         <a
             :href="href"
-            :class="[current ? 'bg-gray-800 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800', 'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold text-gray-900 hover:text-gray-900']"
+            :class="[current ? 'bg-gray-800 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800', 'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']"
         >
             <component
                 :is="loadIcon(iconComponent)"

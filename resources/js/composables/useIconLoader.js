@@ -9,5 +9,5 @@ export default function useIconLoader() {
     }
     return {
         loadIcon,
-    }
+    };
 }

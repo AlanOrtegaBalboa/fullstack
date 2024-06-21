@@ -31,7 +31,7 @@ const sidebarComponents ={
         <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
             <ul class="space-y-2 font-medium">
                 <component
-                    v-for="(item, index) in sidebarComponents"
+                    v-for="(item, index) in sidebarNavItems"
                     :key="`sidebar-nav-item-${index}`"
                     :is="sidebarComponents[item?.component]"
                     v-bind="item?.props"

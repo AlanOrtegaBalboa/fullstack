@@ -12,7 +12,7 @@ class SidebarLink implements SidebarItem
         protected readonly string $text,
         protected readonly string $href,
         protected readonly string $iconComponent,
-        protected readonly string $current,
+        protected readonly bool $current,
 
     ) {
     }

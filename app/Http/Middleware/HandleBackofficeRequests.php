@@ -11,6 +11,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+
 class HandleBackofficeRequests
 {
 
@@ -25,9 +26,9 @@ class HandleBackofficeRequests
             ->addSidebarItem(
                 new SidebarLink(
                     text: 'Dashboard',
-                    href: '#',
+                    href: route('backoffice.dashboard.index'),
                     iconComponent: Heroicons::HOME,
-                    current: false,
+                    current: request()->routeIs('backoffice.dashboard.index'),
                 )
             )
             ->addSidebarItem(new SidebarSeparator())
@@ -38,7 +39,7 @@ class HandleBackofficeRequests
                     iconComponent: Heroicons::LOGOUT,
                     current: false,
                 )
-            )
+            )->getSidebarItems()
 
         );
         return $next($request);
