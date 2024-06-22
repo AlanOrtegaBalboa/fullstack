@@ -7,6 +7,7 @@ export default {
     name: 'App',
     components: {
         BackofficeLayout,
+
     },
     setup() {
         return {
@@ -15,3 +16,4 @@ export default {
     }
 }
 </script>
+
