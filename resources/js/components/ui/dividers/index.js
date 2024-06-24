@@ -1,3 +1,3 @@
-import HorizontalDivider from "./HorizontalDivider.vue";
+import HorizontalDivider from './HorizontalDivider.vue';
 
 export { HorizontalDivider };

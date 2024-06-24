@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use Illuminate\Auth\Middleware\RedirectIfAuthenticated;
+
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //RedirectIfAuthenticated::redirectUsing(fn($request) => redirect($request->user()->getRedirectUrl()));
+
 
     }
     public function registerJsonGroup(): void{

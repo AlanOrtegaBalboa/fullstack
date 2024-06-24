@@ -24,7 +24,7 @@ defineProps({
         :sidebarNavItems="sidebarNavItems"
     />
 
-    <div class="xl:pl=72">
+    <div class="xl:pl-72">
         <main>
             <header
                 class="flex items-center justify-between border-b border-white/5 px-4 py-4 sm:px-6 lg:px-8"

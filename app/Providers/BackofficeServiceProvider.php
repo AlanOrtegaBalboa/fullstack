@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 
-use Illuminate\Auth\Middleware\RedirectIfAuthenticated;
+// use Illuminate\Auth\Middleware\RedirectIfAuthenticated;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
@@ -22,7 +22,7 @@ class BackofficeServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        RedirectIfAuthenticated::redirectUsing(fn($request) => redirect($request->user()->getRedirectUrl()));
+        //RedirectIfAuthenticated::redirectUsing(fn($request) => redirect($request->user()->getRedirectUrl()));
 
         $this->app->bind(
             abstract: \Illuminate\Pagination\LengthAwarePaginator::class,

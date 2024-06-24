@@ -1,3 +1,3 @@
-import StatsTemplate from "./StatsTemplate.vue";
+import StatsTemplate from './StatsTemplate.vue';
 
 export { StatsTemplate };

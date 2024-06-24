@@ -1,2 +1,2 @@
-import AppStat from "./AppStat.vue";
+import AppStat from './AppStat.vue';
 export { AppStat };

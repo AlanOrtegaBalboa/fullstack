@@ -1,3 +1,3 @@
-import AppSpinner from "./AppSpinner.vue";
+import AppSpinner from './AppSpinner.vue';
 
 export { AppSpinner };
