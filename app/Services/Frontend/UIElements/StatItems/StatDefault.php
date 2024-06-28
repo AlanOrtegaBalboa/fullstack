@@ -3,7 +3,7 @@
 namespace App\Services\Frontend\UIElements\StatItems;
 
 use App\Services\Frontend\UIElements\StatItems\Contracts\StatItem;
-
+use Illuminate\Support\Str;
 
 class StatDefault implements StatItem
 {
@@ -15,7 +15,7 @@ class StatDefault implements StatItem
         protected readonly string $label,
         protected readonly string $value,
     ){
-        $this->id = \Str::uuid();
+        $this->id = Str::uuid();
     }
 
     public function toArray(): array
