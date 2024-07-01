@@ -17,4 +17,9 @@ final class ResourceDetailGenerator
 
         return $this;
     }
+
+    public function getLines(): array
+    {
+        return $this->lines;
+    }
 }

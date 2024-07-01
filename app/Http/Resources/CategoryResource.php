@@ -36,13 +36,13 @@ class CategoryResource extends JsonResource
                     url: route('backoffice.categories.update', $this->category_id),
                     method: FormActionGenerator::HTTP_METHOD_PUT,
                 )
-            ),
+            )->getActionForm(),
             'delete_action' => $this->formActionGenerator->setActionForm(
                 new ActionForm(
                     url: route('backoffice.categories.destroy', $this->category_id),
                     method: FormActionGenerator::HTTP_METHOD_DELETE,
                 )
-            ),
+            )->getActionForm(),
         ];
     }
 }
