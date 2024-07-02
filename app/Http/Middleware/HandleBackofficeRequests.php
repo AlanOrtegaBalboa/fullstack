@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 
-class HandleBackofficeRequests
+readonly class HandleBackofficeRequests
 {
 
     public function __construct(protected readonly SidebarGenerator $sidebarGenerator)
@@ -30,8 +30,15 @@ class HandleBackofficeRequests
                     iconComponent: Heroicons::HOME,
                     current: request()->routeIs('backoffice.dashboard.index'),
                 )
-            )
-            ->addSidebarItem(new SidebarSeparator())
+            )->addSidebarItem(new SidebarSeparator())
+            ->addSidebarItem(
+                new SidebarLink(
+                    text: __('Categorías'),
+                    href: route('backoffice.categories.index'),
+                    iconComponent: Heroicons::TAG,
+                    current: request()->routeIs('backoffice.categories.index'),
+                )
+            )->addSidebarItem(new SidebarSeparator())
             ->addSidebarItem(
                 new SidebarLink(
                     text: 'Cerrar sesión',
