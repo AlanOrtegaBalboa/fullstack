@@ -15,11 +15,13 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body id="app" class="font-lato antialiased h-full">
-        <backoffice-layout
-            title="{{ $title ?? '' }}"
-            :sidebar-nav-items="{{ json_encode($sidebarNavItems) }}"
-        >
-            {{ $slot }}
-        </backoffice-layout>
+        <app-toast-provider>
+            <backoffice-layout
+                title="{{ $title ?? '' }}"
+                :sidebar-nav-items="{{ json_encode($sidebarNavItems) }}"
+            >
+                {{ $slot }}
+            </backoffice-layout>
+        </app-toast-provider>
     </body>
 </html>
