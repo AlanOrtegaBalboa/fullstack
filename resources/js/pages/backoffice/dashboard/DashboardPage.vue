@@ -7,11 +7,13 @@ export default {
 <script setup>
 import DataProvider from '@/providers/DataProvider.js'
 import useDataProvider from "@/composables/useDataProvider.js";
+import useAxios from "@/composables/useAxios.js";
 import { AppSpinner } from "@/components/ui";
 import { HorizontalDivider } from "@/components/ui/dividers"
 import { StatsTemplate } from "@/components/templates";
 import { DashboardStats } from "@/components/backoffice/dashboard";
 import { UserInfo } from "@/components/backoffice";
+
 
 defineProps({
     jsonUrl: {
@@ -21,6 +23,18 @@ defineProps({
 })
 
 const { dataProviderKey } = useDataProvider();
+const { makeRequest } = useAxios();
+const requestTest = async () => {
+    const { data } = await makeRequest({
+        method: 'post',
+        url: '/backoffice/test',
+        data: {
+            name: 'test',
+        }
+    });
+}
+requestTest()
+
 </script>
 
 <template>

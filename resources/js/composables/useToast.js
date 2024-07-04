@@ -38,11 +38,12 @@ export default function useToast() {
             state.toasts.splice(index, 1);
         }
     }
+    /**
     addSuccessToast('Welcome', 'This is a success toast message')
     addErrorToast('Error', 'This is a error toast message')
     addInfoToast('Info!', 'This is a info toast message')
     addWarningToast('Warning', 'This is a warning toast message')
-
+    **/
     provide('toasts', state.toasts);
     provide('addSuccessToast', addSuccessToast);
     provide('addErrorToast', addErrorToast);
