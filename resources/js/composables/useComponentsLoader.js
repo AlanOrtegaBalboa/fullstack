@@ -1,6 +1,25 @@
 import { defineAsyncComponent} from "vue";
 
-export default function useComponentsLoader() {
+export default function useComponentsLoader()
+{
+
+    const columnsLoader = component => {
+        return defineAsyncComponent({
+            loader: () => import('@/components/ui/datatable/columns')
+            .then(module => module[component])
+        });
+    }
+
+    
+    const formFieldsLoader = component => {
+        return defineAsyncComponent({
+            loader: () => import('@/components/ui/forms/fields')
+                .then(module => module[component])
+        });
+    }
+
+
+
     const statsLoader = component =>{
         return defineAsyncComponent({
             loader: () => import('@/components/ui/stats')
@@ -34,6 +53,8 @@ export default function useComponentsLoader() {
     }
 
     return {
+        columnsLoader,
+        formFieldsLoader,
         statsLoader,
         components,
         findComponentByName,
