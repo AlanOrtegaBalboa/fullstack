@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'AppDataTablePaginationSummary',
+    name: 'AppDatatablePaginationSummary',
 }
 </script>
 
@@ -19,7 +19,7 @@ defineProps({
             {{ from }}{{ ' ' }}a{{ ' ' }}{{ to }}
         </span>
         de
-        <span>
+        <span class="font-semibold text-gray-900 dark:text-white">
             {{ total }}{{ ' ' }} registros
         </span>
     </span>

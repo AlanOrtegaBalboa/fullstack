@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "AppDataTablePaginationLinks",
+    name: "AppDatatablePaginationLinks",
 }
 </script>
 
@@ -49,12 +49,13 @@ defineEmits(['paginate'])
                 >
                     {{ link.label }}
                 </AppDatatablePaginationLink>
-
-                <AppDatatablePaginationLink v-else>
+                <AppDatatablePaginationCurrent v-else>
                     {{ link.label }}
-                </AppDatatablePaginationLink>
+                </AppDatatablePaginationCurrent>
+
 
             </template>
+
 
             <AppDatatablePaginationLink
                 v-if="link.label === 'next'"

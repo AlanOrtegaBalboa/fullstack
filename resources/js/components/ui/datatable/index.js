@@ -6,7 +6,7 @@ import AppDatatableBody from "./AppDatatableBody.vue";
 import AppDatatableRow from "./AppDatatableRow.vue";
 import AppDatatableNoData from "./AppDatatableNoData.vue";
 import AppDatatablePagination from "./AppDatatablePagination.vue";
-
+import AppDatatable from "./AppDatatable.vue";
 export {
     AppDatatablePaginationLinks,
     AppDatatablePaginationSummary,
@@ -16,4 +16,5 @@ export {
     AppDatatableRow,
     AppDatatableNoData,
     AppDatatablePagination,
+    AppDatatable,
 };

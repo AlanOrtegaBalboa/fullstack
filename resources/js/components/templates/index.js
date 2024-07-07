@@ -1,3 +1,6 @@
 import StatsTemplate from './StatsTemplate.vue';
-
-export { StatsTemplate };
+import TableListTemplate from "./TableListTemplate.vue";
+export {
+    StatsTemplate,
+    TableListTemplate,
+};

@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "AppDataTableRow",
+    name: "AppDatatableRow",
 }
 </script>
 

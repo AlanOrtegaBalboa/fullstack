@@ -9,7 +9,7 @@ defineProps({
     column: {
         type: Object,
     },
-    value:{
+    value: {
         type: Boolean,
     },
 })
@@ -24,7 +24,7 @@ defineProps({
             {{ column.true_value}}
         </span>
         <span
-            v-if="value"
+            v-else
             class="py-2 px-3 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800"
         >
             {{ column.false_value}}

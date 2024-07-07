@@ -10,7 +10,7 @@ export default function useComponentsLoader()
         });
     }
 
-    
+    /*
     const formFieldsLoader = component => {
         return defineAsyncComponent({
             loader: () => import('@/components/ui/forms/fields')
@@ -18,7 +18,7 @@ export default function useComponentsLoader()
         });
     }
 
-
+     */
 
     const statsLoader = component =>{
         return defineAsyncComponent({
@@ -54,7 +54,7 @@ export default function useComponentsLoader()
 
     return {
         columnsLoader,
-        formFieldsLoader,
+        //formFieldsLoader,
         statsLoader,
         components,
         findComponentByName,

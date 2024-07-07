@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'AppDataTablePagination',
+    name: 'AppDatatablePagination',
 }
 </script>
 

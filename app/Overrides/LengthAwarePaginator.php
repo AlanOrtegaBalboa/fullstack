@@ -9,15 +9,15 @@ final class LengthAwarePaginator extends \Illuminate\Pagination\LengthAwarePagin
         return[
             'data' => $this->items->toArray(),
             'pagination' => [
-                'links' => [
+
                     'links' => $this->customLinksCollection(),
                     'current_page' => $this->currentPage(),
                     'from' => $this->firstItem(),
                     'last_page' => $this->lastPage(),
                     'to' => $this->lastItem(),
                     'total' => $this->total(),
-                ]
-            ]
+
+            ],
         ];
     }
     public function customLinksCollection(): Collection
@@ -31,7 +31,7 @@ final class LengthAwarePaginator extends \Illuminate\Pagination\LengthAwarePagin
         $sliceLinks = [];
 
         if(isset($total, $this->perPage)){
-            $sliceLinks = range(1,ceil($total/$this->perPage));
+            $sliceLinks = range(1, ceil($total / $this->perPage));
 
             if(isset($currentPage, $onEachSide))
             {
@@ -49,7 +49,7 @@ final class LengthAwarePaginator extends \Illuminate\Pagination\LengthAwarePagin
         }
 
         foreach ($sliceLinks as $link) {
-            $links[] = ['active' => (int)$link === $currentPage, 'label' => (int)$link];
+            $links[] = ['active' => (int) $link === $currentPage, 'label' => (int) $link];
         }
 
         if ($currentPage < $lastPage && $this->perPage < $total) {

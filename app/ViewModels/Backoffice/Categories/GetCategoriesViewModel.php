@@ -44,7 +44,7 @@ final class GetCategoriesViewModel extends ViewModel implements Datatable
 {
     use WithPerPage;
 
-    const PER_PAGE = 10;
+    const PER_PAGE = 1;
 
     const ROUTE_BACKOFFICE_CATEGORIES_STORE = 'backoffice.categories.store';
 

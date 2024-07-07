@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "AppDataTableStatusColumn",
+    name: "AppDatatableStatusColumn",
 }
 </script>
 

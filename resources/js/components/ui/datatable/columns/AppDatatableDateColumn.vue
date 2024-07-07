@@ -1,6 +1,6 @@
 <script>
     export default {
-        name: 'AppDataTableDateColumn',
+        name: 'AppDatatableDateColumn',
     }
 </script>
 

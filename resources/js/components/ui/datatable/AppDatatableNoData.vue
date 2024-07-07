@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "AppDataTableNoData",
+    name: "AppDatatableNoData",
 }
 </script>
 
