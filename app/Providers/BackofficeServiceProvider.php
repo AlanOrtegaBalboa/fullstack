@@ -26,7 +26,7 @@ class BackofficeServiceProvider extends ServiceProvider
 
         $this->app->bind(
             abstract: \Illuminate\Pagination\LengthAwarePaginator::class,
-            concrete: \App\Overrides\LengthAwarePaginator::class
+            concrete: \App\Overrides\LengthAwarePaginator::class,
         );
 
 

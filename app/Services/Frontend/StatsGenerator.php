@@ -2,7 +2,7 @@
 
 namespace App\Services\Frontend;
 
-use App\Services\Frontend\UIElements\SidebarItems\Contracts\SidebarItem;
+
 use App\Services\Frontend\UIElements\StatItems\Contracts\StatItem;
 final class StatsGenerator
 {

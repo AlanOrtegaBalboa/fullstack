@@ -6,6 +6,7 @@ use App\Services\Frontend\UIElements\ColumnItems\Contracts\ColumnItem;
 
 final class TableGenerator
 {
+
     private array $sorter = [];
 
     private array $columns = [];

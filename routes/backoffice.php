@@ -1,14 +1,18 @@
 <?php
 
+use App\Http\Controllers\Backoffice\DashboardController;
+use App\Http\Controllers\Backoffice\CategoryController;
+use Illuminate\Support\Facades\Route;
 
 use Illuminate\Http\Request;
 
-Route::jsonGroup('dashboard', \App\Http\Controllers\Backoffice\DashboardController::class, [
+
+Route::jsonGroup('dashboard', DashboardController::class, [
     'index', 'json'
 
 ]);
 
-Route::jsonGroup('categories', \App\Http\Controllers\Backoffice\CategoryController::class, [
+Route::jsonGroup('categories', CategoryController::class, [
     'index', 'json', 'store', 'update', 'destroy', 'export',
 ]);
 

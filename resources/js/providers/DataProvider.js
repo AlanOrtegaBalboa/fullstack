@@ -29,11 +29,11 @@ export default defineComponent({
 
             const urlParts = props.url.split('?');
             if (urlParts.length > 1) {
-                const arrayOfFilters = urlParts.split('&');
-                arrayOfFilters.forEach(filter => {
+                const arrayOfFilters = urlParts[1].split('&');
+                arrayOfFilters.forEach((filter) => {
                     const filterParts = filter.split('=');
                     props.filters[filterParts[0]] = filterParts[1];
-                })
+                });
             }
 
             let filters = Object.keys(props.filters)

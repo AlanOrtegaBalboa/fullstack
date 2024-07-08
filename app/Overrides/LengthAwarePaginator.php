@@ -5,17 +5,17 @@ use Illuminate\Support\Collection;
 
 final class LengthAwarePaginator extends \Illuminate\Pagination\LengthAwarePaginator
 {
-    public function toArray(): array{
+    public function toArray(): array
+    {
         return[
             'data' => $this->items->toArray(),
             'pagination' => [
-
-                    'links' => $this->customLinksCollection(),
-                    'current_page' => $this->currentPage(),
-                    'from' => $this->firstItem(),
-                    'last_page' => $this->lastPage(),
-                    'to' => $this->lastItem(),
-                    'total' => $this->total(),
+                'links' => $this->customLinksCollection(),
+                'current_page' => $this->currentPage(),
+                'from' => $this->firstItem(),
+                'last_page' => $this->lastPage(),
+                'to' => $this->lastItem(),
+                'total' => $this->total(),
 
             ],
         ];

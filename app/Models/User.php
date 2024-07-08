@@ -2,13 +2,7 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use App\Models\Builders\UserBuilder;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use App\Providers\BackofficeServiceProvider;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
 class User extends Base\User
 {

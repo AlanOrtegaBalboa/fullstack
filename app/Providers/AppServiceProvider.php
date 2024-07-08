@@ -29,7 +29,8 @@ class AppServiceProvider extends ServiceProvider
 
 
     }
-    public function registerJsonGroup(): void{
+    public function registerJsonGroup(): void
+    {
         Route::macro('jsonGroup', function (string $prefix, string $controller, array $methods = []){
             Route::prefix($prefix)->name($prefix .'.')->group(function () use ($controller, $methods) {
                 if (in_array('index', $methods)){
