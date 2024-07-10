@@ -27,7 +27,7 @@ final class LengthAwarePaginator extends \Illuminate\Pagination\LengthAwarePagin
         $total = $this->total();
         $lastPage = $this->lastPage();
 
-        $links=[];
+        $links = [];
         $sliceLinks = [];
 
         if(isset($total, $this->perPage)){

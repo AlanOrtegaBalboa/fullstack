@@ -22,24 +22,24 @@ readonly class HandleBackofficeRequests
     public function handle(Request $request, Closure $next): Response
     {
         view()->share('sidebarNavItems', $this->sidebarGenerator
-            ->addSidebarItem(new SidebarHelloUser())
-            ->addSidebarItem(
+            ->addSidebarItem(new SidebarHelloUser()
+            )->addSidebarItem(
                 new SidebarLink(
                     text: 'Dashboard',
                     href: route('backoffice.dashboard.index'),
                     iconComponent: Heroicons::HOME,
                     current: request()->routeIs('backoffice.dashboard.index'),
                 )
-            )->addSidebarItem(new SidebarSeparator())
-            ->addSidebarItem(
+            )->addSidebarItem(new SidebarSeparator()
+            )->addSidebarItem(
                 new SidebarLink(
                     text: __('Categorías'),
                     href: route('backoffice.categories.index'),
                     iconComponent: Heroicons::TAG,
                     current: request()->routeIs('backoffice.categories.index'),
                 )
-            )->addSidebarItem(new SidebarSeparator())
-            ->addSidebarItem(
+            )->addSidebarItem(new SidebarSeparator()
+            )->addSidebarItem(
                 new SidebarLink(
                     text: 'Cerrar sesión',
                     href: route('logout'),

@@ -11,7 +11,7 @@ use Maatwebsite\Excel\Concerns\FromView;
 
 readonly class CategoriesExport implements Exportable, FromView
 {
-    public function __construct(protected readonly Collection $collection) {}
+    public function __construct(protected Collection $collection) {}
     public function view(): View
     {
         return view('backoffice.exports.categories', [

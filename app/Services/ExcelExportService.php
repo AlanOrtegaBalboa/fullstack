@@ -18,7 +18,7 @@ class ExcelExportService
     public static function generateExportUrl(string $routeName):string
     {
         if(! Route::has($routeName)) {
-            throw new \Exception("La ruta {$routeName} no existe");
+            throw new Exception("La ruta {$routeName} no existe");
         }
         return route($routeName, RequestHelper::queryWithoutNulls());
     }

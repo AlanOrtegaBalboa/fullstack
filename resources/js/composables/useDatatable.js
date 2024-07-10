@@ -1,6 +1,6 @@
 import { reactive, toRefs } from "vue";
 
-export default function (columns ){
+export default function (columns){
     const model = reactive({
         filters: {},
     });

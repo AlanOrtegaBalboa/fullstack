@@ -12,7 +12,6 @@ import AppDatatablePaginationCurrent from "./AppDatatablePaginationCurrent.vue";
 defineProps({
     pagination: {
         type: Object,
-
     }
 })
 

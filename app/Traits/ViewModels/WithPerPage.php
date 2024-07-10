@@ -6,6 +6,6 @@ trait WithPerPage
 {
     protected function perPage(int $perPage): int
     {
-        return request(key: 'perPage') ?? $perPage;
+        return request('perPage') ?? $perPage;
     }
 }

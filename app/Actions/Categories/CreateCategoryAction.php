@@ -4,7 +4,6 @@ namespace App\Actions\Categories;
 
 use App\Actions\Contracts\CreateAction;
 use App\Models\Category;
-use Illuminate\Database\Eloquent\Model;
 
 final class CreateCategoryAction implements CreateAction
 {

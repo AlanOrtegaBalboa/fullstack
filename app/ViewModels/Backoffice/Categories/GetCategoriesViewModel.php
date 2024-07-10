@@ -24,6 +24,7 @@ use App\Services\Frontend\UIElements\ColumnItems\DateColumn;
 use App\Services\Frontend\UIElements\ColumnItems\TextColumn;
 use App\Services\Frontend\UIElements\FormFields\CheckboxField;
 use App\Services\Frontend\UIElements\FormFields\DateField;
+use App\Services\Frontend\UIElements\FormFields\SearchField;
 use App\Services\Frontend\UIElements\FormFields\SelectField;
 use App\Services\Frontend\UIElements\FormFields\SelectOptions\BooleanOptions;
 use App\Services\Frontend\UIElements\FormFields\TextareaField;
@@ -219,6 +220,9 @@ final class GetCategoriesViewModel extends ViewModel implements Datatable
 
     }
 
+    /**
+     * @throws Exception
+     */
     protected function resourceDetailConfig(): array
     {
         return $this->resourceDetailGenerator
@@ -316,7 +320,7 @@ final class GetCategoriesViewModel extends ViewModel implements Datatable
     {
         return app(FormFieldsGenerator::class)
             ->addField(
-                new SelectField(
+                new SearchField(
                     name: 'query',
                     label: __('Buscador'),
                     placeholder: __('Buscar'),

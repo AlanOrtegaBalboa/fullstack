@@ -10,7 +10,9 @@ final class ResourceDetailGenerator
 {
     private array $lines = [];
 
-
+    /**
+     * @throws Exception
+     */
     public function addLine(ResourceDetailLine $line): self
     {
         $this->lines[] = $line->generate();

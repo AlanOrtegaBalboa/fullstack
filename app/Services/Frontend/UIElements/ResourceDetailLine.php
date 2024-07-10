@@ -14,6 +14,11 @@ final class ResourceDetailLine
     )
     {}
 
+    /**
+     * @throws Exception
+     */
+
+
     public function generate(): array
     {
         if (! $this->label && ! $this->icon) {

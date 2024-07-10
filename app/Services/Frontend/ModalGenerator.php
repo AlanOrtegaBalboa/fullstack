@@ -31,6 +31,7 @@ final class ModalGenerator
     {
         $this->modals[$modal->getType()] = $modal->generate();
 
+
     }
 
     public function getModals():array

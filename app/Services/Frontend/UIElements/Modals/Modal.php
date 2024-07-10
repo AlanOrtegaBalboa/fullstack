@@ -31,7 +31,7 @@ class Modal implements Contracts\Modal
             'text_submit_button' => $this->textSubmitButton,
             'question_message' => $this->questionMessage,
             'text_cancel_button' => $this->textCancelButton,
-            'form' => $this->formFields,
+            'form_fields' => $this->formFields,
             'extra_data' => $this->extraData,
         ], fn ($value) => $value !== null);
     }
